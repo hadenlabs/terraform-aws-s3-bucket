@@ -1,6 +1,6 @@
 <!-- Space: Projects -->
-<!-- Parent: TerraformModuleTemplate -->
-<!-- Title: Examples TerraformModuleTemplate -->
+<!-- Parent: TerraformAwsS3Bucket -->
+<!-- Title: Examples TerraformAwsS3Bucket -->
 
 <!-- Label: Examples -->
 <!-- Include: ./../disclaimer.md -->
@@ -10,7 +10,7 @@
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-module-template/aws"
+    source  = "hadenlabs/terraform-aws-s3-bucket/aws"
     version = "0.0.0"
   }
 ```

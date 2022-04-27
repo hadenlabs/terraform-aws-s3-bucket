@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: TerraformModuleTemplate -->
-<!-- Title: Env Vars TerraformModuleTemplate -->
+<!-- Parent: TerraformAwsS3Bucket -->
+<!-- Title: Env Vars TerraformAwsS3Bucket -->
 
-<!-- Label: TerraformModuleTemplate -->
+<!-- Label: TerraformAwsS3Bucket -->
 <!-- Label: Project -->
 <!-- Label: Env Vars -->
 <!-- Include: disclaimer.md -->
