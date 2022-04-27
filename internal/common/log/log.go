@@ -1,9 +1,9 @@
 package log
 
 import (
-	"github.com/hadenlabs/terraform-module-template/config"
-	"github.com/hadenlabs/terraform-module-template/internal/common/log/provider"
-	"github.com/hadenlabs/terraform-module-template/internal/errors"
+	"github.com/hadenlabs/terraform-aws-s3-bucket/config"
+	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/common/log/provider"
+	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/errors"
 )
 
 // New initialize a new Log.

@@ -1,8 +1,8 @@
 <!-- Space: Projects -->
-<!-- Parent: TerraformModuleTemplate -->
-<!-- Title: Components TerraformModuleTemplate -->
+<!-- Parent: TerraformAwsS3Bucket -->
+<!-- Title: Components TerraformAwsS3Bucket -->
 
-<!-- Label: TerraformModuleTemplate -->
+<!-- Label: TerraformAwsS3Bucket -->
 <!-- Label: Project -->
 <!-- Label: Components -->
 <!-- Include: disclaimer.md -->

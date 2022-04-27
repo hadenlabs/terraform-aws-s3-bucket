@@ -12,16 +12,16 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-module-template)](https://github.com/hadenlabs/terraform-module-template/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/lint-code)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/ci)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-module-template/test)](https://github.com/hadenlabs/terraform-module-template/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com) [![Terraform Version](https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform)](https://github.com/hashicorp/terraform/releases)
+[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-s3-bucket)](https://github.com/hadenlabs/terraform-aws-s3-bucket/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/lint-code)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/ci)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/test)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com) [![Terraform Version](https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform)](https://github.com/hashicorp/terraform/releases)
 
-# terraform-module-template
+# terraform-aws-s3-bucket
 
-terraform-module-template for project
+terraform-aws-s3-bucket for project
 
 ### Replace name project to New Project
 
 ```bash
-  agr 'terraform-module-template' 'new-project'
+  agr 'terraform-aws-s3-bucket' 'new-project'
 ```
 
 ## Requirements
@@ -38,7 +38,7 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-module-template/aws"
+    source  = "hadenlabs/terraform-aws-s3-bucket/aws"
     version = "0.0.0"
   }
 ```
@@ -48,8 +48,8 @@ Full working examples can be found in [examples](./examples) folder.
 ## Examples
 
 <!-- Space: Projects -->
-<!-- Parent: TerraformModuleTemplate -->
-<!-- Title: Examples TerraformModuleTemplate -->
+<!-- Parent: TerraformAwsS3Bucket -->
+<!-- Title: Examples TerraformAwsS3Bucket -->
 
 <!-- Label: Examples -->
 <!-- Include: ./../disclaimer.md -->
@@ -59,7 +59,7 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-module-template/aws"
+    source  = "hadenlabs/terraform-aws-s3-bucket/aws"
     version = "0.0.0"
   }
 ```
@@ -98,7 +98,7 @@ No outputs.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/hadenlabs/terraform-module-template/issues).
+File a GitHub [issue](https://github.com/hadenlabs/terraform-aws-s3-bucket/issues).
 
 ## Contributing
 
@@ -131,6 +131,6 @@ All other trademarks referenced herein are the property of their respective owne
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
-## Don't forget to 🌟 Star 🌟 the repo if you like terraform-module-template
+## Don't forget to 🌟 Star 🌟 the repo if you like terraform-aws-s3-bucket
 
-[Your feedback is appreciated](https://github.com/hadenlabs/terraform-module-template/issues)
+[Your feedback is appreciated](https://github.com/hadenlabs/terraform-aws-s3-bucket/issues)
