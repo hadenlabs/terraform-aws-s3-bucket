@@ -27,3 +27,8 @@ output "bucket_region" {
   value       = module.main.bucket_region
   description = "Bucket region"
 }
+
+output "tags" {
+  value       = module.main.tags
+  description = "tags generated"
+}

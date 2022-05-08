@@ -223,22 +223,23 @@ title = "gitleaks config"
     description = "Files with keys and credentials"
     file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass)$'''
     tags = ["key", "files"]
+    [rules.allowlist]
+        description = "ignore some"
+        files = ['''(.*pub|env)$''']
 
 [[rules]]
     description = "Extension Files with keys and credentials"
     file = '''(.*?)(pub|pem|ppk|key)$'''
     tags = ["key", "files"]
+    [rules.allowlist]
+        description = "ignore file test"
+        files = [
+          '''.*-test.*$''',
+        ]
 
 # Global allowlist
 [allowlist]
   description = "Whitelisted files"
-  paths = [
-    '''^vendor/''',
-    '''^bower_components/''',
-    '''^public/''',
-    '''^node_modules/''',
-    '''^theme/''',
-  ]
   files = [
     '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
     '''^\.gitignore$''',
@@ -248,7 +249,14 @@ title = "gitleaks config"
     '''^sonar-project.properties$''',
     '''^node_modules/(.*?)$''',
   ]
+
   commits = []
+
+  paths = [
+    '''^vendor/(.*?)$''',
+    '''^node_modules/(.*?)$''',
+    '''^test/fixtures/keys/(.*?)$''',
+  ]
 
 [whitelist]
   description = "image and html allowlists"

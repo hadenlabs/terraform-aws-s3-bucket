@@ -4,21 +4,14 @@ import (
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
-
-	"github.com/hadenlabs/terraform-aws-s3-bucket/config"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/app/external/faker"
 	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/testutil"
 )
 
-func Test{{pascalCase testName}}Success(t *testing.T) {
+func TestMakeIamUserSuccess(t *testing.T) {
 	t.Parallel()
-	conf := config.Must()
-	logger := log.Factory(*conf)
-	logger.Debugf(
-		"values for test terraform-aws-s3-bucket is",
-	)
 
 	tags := map[string]interface{}{
 		"tag1": "tags1",
@@ -29,6 +22,7 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
 	acl := "private"
 	versioningEnabled := false
 	forceDestroy := true
+	userEnabled := true
 
 	allowedBucketActions := []string{
 		"s3:GetObject",
@@ -38,12 +32,13 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		// The path to where your Terraform code is located
-        TerraformDir: "s3-{{dashCase testName}}",
+		TerraformDir: "s3-make-iam-user",
 		Upgrade:      true,
 		Vars: map[string]interface{}{
 			"namespace":              namespace,
 			"stage":                  stage,
 			"name":                   name,
+			"user_enabled":           userEnabled,
 			"acl":                    acl,
 			"versioning_enabled":     versioningEnabled,
 			"force_destroy":          forceDestroy,
@@ -59,4 +54,6 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 	outputInstance := terraform.Output(t, terraformOptions, "instance")
 	assert.NotEmpty(t, outputInstance, outputInstance)
+	outputUserAccessKeyID := terraform.Output(t, terraformOptions, "access_key_id")
+	assert.NotEmpty(t, outputUserAccessKeyID, outputUserAccessKeyID)
 }

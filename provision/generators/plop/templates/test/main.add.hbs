@@ -1,3 +1,13 @@
 module "main" {
-  source       = "../.."
+  source                 = "../.."
+  name                   = var.name
+  stage                  = var.stage
+  namespace              = var.namespace
+  acl                    = var.acl
+  versioning_enabled     = var.versioning_enabled
+  force_destroy          = var.force_destroy
+  tags                   = var.tags
+  use_fullname = var.use_fullname
+  user_enabled = var.user_enabled
+  allowed_bucket_actions = var.allowed_bucket_actions
 }

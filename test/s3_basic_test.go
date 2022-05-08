@@ -4,21 +4,14 @@ import (
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
-
-	"github.com/hadenlabs/terraform-aws-s3-bucket/config"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/app/external/faker"
 	"github.com/hadenlabs/terraform-aws-s3-bucket/internal/testutil"
 )
 
-func Test{{pascalCase testName}}Success(t *testing.T) {
+func TestBasicSuccess(t *testing.T) {
 	t.Parallel()
-	conf := config.Must()
-	logger := log.Factory(*conf)
-	logger.Debugf(
-		"values for test terraform-aws-s3-bucket is",
-	)
 
 	tags := map[string]interface{}{
 		"tag1": "tags1",
@@ -38,7 +31,7 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		// The path to where your Terraform code is located
-        TerraformDir: "s3-{{dashCase testName}}",
+		TerraformDir: "s3-basic",
 		Upgrade:      true,
 		Vars: map[string]interface{}{
 			"namespace":              namespace,
@@ -58,5 +51,7 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
 	// This will run `terraform init` and `terraform apply` and fail the test if there are any errors
 	terraform.InitAndApply(t, terraformOptions)
 	outputInstance := terraform.Output(t, terraformOptions, "instance")
+	outputTags := terraform.Output(t, terraformOptions, "tags")
 	assert.NotEmpty(t, outputInstance, outputInstance)
+	assert.NotEmpty(t, outputTags, outputTags)
 }

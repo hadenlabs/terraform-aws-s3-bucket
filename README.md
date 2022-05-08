@@ -12,17 +12,11 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-s3-bucket)](https://github.com/hadenlabs/terraform-aws-s3-bucket/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/lint-code)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/ci)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/test)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com) [![Terraform Version](https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform)](https://github.com/hashicorp/terraform/releases)
+[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-aws-s3-bucket)](https://github.com/hadenlabs/terraform-aws-s3-bucket/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/lint-code)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/ci)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-aws-s3-bucket/test)](https://github.com/hadenlabs/terraform-aws-s3-bucket/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com) [![Terraform Version](https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform)](https://github.com/hashicorp/terraform/releases) [![AWS Provider Version](https://img.shields.io/badge/AWS-3%20and%202.0+-F8991D.svg?logo=terraform)](https://github.com/terraform-providers/terraform-provider-aws/releases)
 
 # terraform-aws-s3-bucket
 
 terraform-aws-s3-bucket for project
-
-### Replace name project to New Project
-
-```bash
-  agr 'terraform-aws-s3-bucket' 'new-project'
-```
 
 ## Requirements
 
@@ -38,7 +32,7 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-aws-s3-bucket/aws"
+    source  = "hadenlabs/s3-bucket/aws"
     version = "0.0.0"
   }
 ```
@@ -59,7 +53,7 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```hcl
   module "main" {
-    source  = "hadenlabs/terraform-aws-s3-bucket/aws"
+    source  = "hadenlabs/s3-bucket/aws"
     version = "0.0.0"
   }
 ```
